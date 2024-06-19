@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.example</groupId>
+  <artifactId>CounterApplication</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>DeadlockApplication Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <m2e.apt.activation>jdt_apt</m2e.apt.activation>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>5.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+   <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+ 
+  </dependencies>
+  <build>
+<finalName>DeadlockApplication</finalName>
+<plugins>
+<plugin>
+<groupId>org.openrewrite.maven</groupId>
+<artifactId>rewrite-maven-plugin</artifactId>
+<version>5.15.4</version>
+<configuration>
+<activeRecipes>
+<recipe>org.openrewrite.java.format.AutoFormat</recipe>
+</activeRecipes>
+</configuration>
+</plugin>
+</plugins>
+</build>
+    </project>
